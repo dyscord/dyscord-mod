@@ -5,5 +5,5 @@ from discord.ext.commands import command
 
 class DyscordMod(DyscordPlugin):
     @command(pass_context=True)
-    def test(self, ctx: DyscordContext):
-        ctx.channel.send("Hey")
+    async def test(self, ctx: DyscordContext):
+        await ctx.channel.send("Hey")
