@@ -4,6 +4,7 @@ from dyscord_plugin.message import DyscordContext
 from discord.ext.commands import command
 import discord
 
+
 class DyscordMod(DyscordPlugin):
     '''This is the moderation plugin for Dyscord.'''
     def __init__(self, b):
@@ -14,6 +15,7 @@ class DyscordMod(DyscordPlugin):
         """Kick a member."""
         await ctx.guild.kick(user, reason)
         await ctx.channel.send(f"Kicked {user} ({user.id}) | Reason: {reason}")
+
     @command(pass_context=True)
     async def ban(self, ctx: DyscordContext, user : discord.Member, *, reason):
         """Ban a member."""
